@@ -39,7 +39,13 @@ class SimpleArray:
         for i in range(self.length):
             if self.array[i]==value:
                 return i
-            
+    # get value at a particular index
+    def get(self,index):
+        if (self.length>index):
+            print('Index out of range')
+            return
+        return self.array[index]
+    
 
 
 # Example usage
@@ -56,7 +62,12 @@ if __name__ == "__main__":
     my_array.insert(10)
     my_array.insert(20)
     my_array.insert(30)
-    my_array.insert(30)
+    my_array.insert(40)
+    my_array.insert(50)
+    my_array.insert(60)
+    my_array.insert(70)
+    my_array.insert(80)
+
     print("Array Contents: After Inserting values",my_array.array)
     # delete some values 
     my_array.delete(10)
@@ -64,3 +75,4 @@ if __name__ == "__main__":
     print("Array Contents: After Deleting values",my_array.array)
     # finding the index of a value
     print("what is the index of the value in my array:",my_array.findIndex(20))
+    print("what is in my array at the particular index",my_array.get(4))
